@@ -1,2 +1,2 @@
-# learn-fullstack-javascript
+# Learning JavaScript
 Learning Fullstack JavaScript Development: MongoDB, Node.js, React.js
