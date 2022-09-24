@@ -41,16 +41,25 @@
 // Section 2.4 Express
 import express from 'express';
 import config from './config';
+
+import apiRouter from './api';
+
 import fs from 'fs';
 
 const server = express();
 
 // routing 
 server.get('/', (req, res)=> {
-    res.send("Hello Express!");
-})
+    res.render('index');
+});
 
-// 1st way
+server.set('view engine', 'ejs');
+
+
+server.use('/api', apiRouter);
+
+
+// 1st way -- the magic way
 server.use(express.static('public'));
 // 2nd way
 // server.get('/about.html', (req, res) => {
