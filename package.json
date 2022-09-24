@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/jscomplete/learn-fullstack-javascript.git"
   },
-  "author": "",
+  "author": "musab",
   "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/jscomplete/learn-fullstack-javascript/issues"
@@ -21,8 +21,9 @@
     "ejs": "^3.1.8",
     "express": "^4.14.0",
     "mongodb": "^4.9.1",
+    "prop-types": "^15.8.1",
     "react": "^18.2.0",
-    "react-dom": "^15.3.2"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "babel-cli": "^6.16.0",
@@ -31,9 +32,10 @@
     "babel-preset-es2015": "^6.16.0",
     "babel-preset-react": "^6.16.0",
     "babel-preset-stage-2": "^6.17.0",
-    "eslint": "^8.23.1",
-    "eslint-plugin-react": "^7.31.8",
-    "nodemon": "^2.0.19",
-    "webpack": "^5.74.0"
+    "eslint": "^3.7.1",
+    "eslint-plugin-react": "^6.4.0",
+    "nodemon": "^1.11.0",
+    "webpack": "^1.13.2",
+    "webpack-cli": "^4.10.0"
   }
 }
