@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Hello Ejs</title>
-</head>
-<body>
-  <%= Math.Random() %>
-</body>
-</html>
+<%- include('header') %>
+    <!-- by default if you use any tag in the content then it will escape. So for that you'll need the <%- %> syntax -->
+    <%- content %>
+    <hr> <br>
+
+    <!-- <%= content %> -->
+    <!-- <br> -->
+    <%= Math.random() %>
+<%- include('footer') %>
+

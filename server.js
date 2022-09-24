@@ -50,7 +50,9 @@ const server = express();
 
 // routing 
 server.get('/', (req, res)=> {
-    res.render('index');
+    res.render('index', {
+        content: 'Hello Express and <em>EJS</em>'
+    });
 });
 
 server.set('view engine', 'ejs');
