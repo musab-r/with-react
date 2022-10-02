@@ -2,14 +2,25 @@ import React from "react";
 import Header from "./Header";
 import PropTypes from 'prop-types';
 import ContestPreview from "./ContestPreview";
+import axios from 'axios';
 
 class App extends React.Component {
     state = {
-        pageHeader: this.props.pageHeader,
-        contests: this.props.contests
+        pageHeader: 'Hello React Header!',
+        contests: []
     };
     componentDidMount(){
-
+        // timer and listener
+        
+        // ajax request
+        axios.get('/api/contests')
+        .then(resp => {
+            console.log(resp)
+            this.setState({
+                contests: resp.data.contests
+            })
+        })
+        .catch(console.error)
     }
     
     render() {
@@ -17,8 +28,8 @@ class App extends React.Component {
             <div className="App">
                 <Header message={this.state.pageHeader}/>
                 <div>
-                    {this.props.contests.map(contest =>
-                        <ContestPreview {...contest} />
+                    {this.state.contests.map(contest =>
+                        <ContestPreview key={contest.id} {...contest} />
                     )}
                 </div>
             </div>
