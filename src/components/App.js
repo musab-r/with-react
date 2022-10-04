@@ -7,20 +7,10 @@ import axios from 'axios';
 class App extends React.Component {
     state = {
         pageHeader: 'Hello React Header!',
-        contests: []
+        contests: this.props.initialContests
     };
     componentDidMount(){
         // timer and listener
-        
-        // ajax request
-        axios.get('/api/contests')
-        .then(resp => {
-            console.log(resp)
-            this.setState({
-                contests: resp.data.contests
-            })
-        })
-        .catch(console.error)
     }
     
     render() {
