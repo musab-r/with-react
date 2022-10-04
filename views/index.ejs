@@ -1,10 +1,15 @@
+<script type="text/javascript">
+    window.initialData = <%- JSON.stringify(initialData)-%>
+</script>
+
 <%- include('header') -%>
     <!-- by default if you use any tag in the content then it will escape. So for that you'll need the <%- %> syntax -->
     <div id="root">
-        <%- content -%>
+        <%- initialMarkup -%>
     </div>
 
     <hr> <br>
 
 <%- include('footer') -%>
+
 
