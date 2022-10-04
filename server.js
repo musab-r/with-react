@@ -14,17 +14,25 @@ server.use(sassMiddleware({
 
 server.set('view engine', 'ejs');
 
+import serverRender from './serverRander';
+
 // routing 
 server.get('/', (req, res) => {
-    res.render('index', {
-        content: '...'
-    });
+    serverRender()
+    .then(content => {
+        res.render('index', {
+            content
+        });
+    })
+    .catch(console.error);
+
+    
 });
 
 server.use('/api', apiRouter);
 server.use(express.static('public'));
 
-server.listen(config.port, ()=> {
+server.listen(config.port, config.host, ()=> {
     console.info('Express is listening to the port ', config.port);
 });
 
